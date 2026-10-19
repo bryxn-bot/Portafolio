@@ -3,7 +3,7 @@
 ========================================= */
 .proyectos-section {
   padding: 5rem 5%;
-  background-color: #0b0f19;
+  background-color: #2a0a1c; /* vino oscuro */
   display: flex;
   justify-content: center;
 }
@@ -30,18 +30,20 @@
    TARJETA DEL PROYECTO
 ========================================= */
 .proyecto-card {
-  background-color: #111a2e;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #46112e; /* vino, igual que las demás tarjetas */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   overflow: hidden; /* Clave para que la imagen no se salga de las curvas */
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .proyecto-card:hover {
   transform: translateY(-8px);
+  border-color: rgba(251, 191, 36, 0.4); /* borde ámbar */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* =========================================
@@ -51,7 +53,7 @@
   width: 100%;
   height: 280px;
   object-fit: cover; /* Evita que la captura se deforme */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* =========================================
@@ -72,7 +74,7 @@
 }
 
 .proyecto-desc {
-  color: #8b95a1;
+  color: #f6e4d8; /* crema */
   line-height: 1.6;
   font-size: 1rem;
   margin-bottom: 1.5rem;
@@ -90,9 +92,9 @@
 }
 
 .tech-tag {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #a0aab2;
+  background-color: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #fcd34d; /* ámbar claro */
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -121,23 +123,24 @@
 }
 
 .btn-demo {
-  color: #00d8ff;
-  border: 1px solid #00d8ff;
-  background-color: rgba(0, 216, 255, 0.05);
+  color: #2a0a1c;
+  border: 1px solid #fbbf24;
+  background-color: #fbbf24; /* botón principal, ámbar sólido */
 }
 
 .btn-demo:hover {
-  background-color: rgba(0, 216, 255, 0.15);
+  background-color: #d5a21f;
+  border-color: #d5a21f;
 }
 
 .btn-codigo {
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
 
 .btn-codigo:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 /* =========================================

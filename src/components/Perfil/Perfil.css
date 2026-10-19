@@ -1,10 +1,17 @@
 /* =========================================
+   Usa las mismas variables de color de hero.css (:root).
+   Si cambias la paleta allá, esta sección cambia sola.
+   Los valores después de la coma son respaldo por si
+   hero.css no está cargado.
+========================================= */
+
+/* =========================================
    CONTENEDOR PRINCIPAL
 ========================================= */
 .sobre-mi-section {
   padding: 5rem 5%;
-  background-color: #0b0f19; /* Continuidad del fondo oscuro */
-  color: #ffffff;
+  background-color: var(--fondo-borde, #2a0a1c); /* Continúa el fondo del hero */
+  color: var(--texto, #ffffff);
   display: flex;
   justify-content: center;
 }
@@ -18,7 +25,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2.5rem;
-  color: #ffffff;
+  color: var(--texto, #ffffff);
 }
 
 /* =========================================
@@ -35,11 +42,13 @@
    TARJETAS (Cards)
 ========================================= */
 .card {
-  background-color: #111a2e; /* Un tono ligeramente más claro que el fondo */
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #3b1127; /* respaldo */
+  /* Un tono un poco más claro que el fondo, calculado con la paleta */
+  background-color: color-mix(in srgb, var(--fondo-centro, #7a1d4e) 35%, var(--fondo-borde, #2a0a1c));
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
@@ -50,8 +59,8 @@
 }
 
 .icon-box {
-  background-color: rgba(110, 231, 183, 0.1);
-  color: #6ee7b7; /* Color menta/cian */
+  background-color: rgba(251, 191, 36, 0.14);
+  color: var(--acento, #fbbf24); /* Color de acento (ámbar) */
   padding: 0.8rem;
   border-radius: 8px;
   display: flex;
@@ -62,11 +71,11 @@
 .card-header h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--texto, #ffffff);
 }
 
 .card-text {
-  color: #8b95a1;
+  color: var(--texto-suave, #f6e4d8);
   line-height: 1.8;
   font-size: 1rem;
   text-align: justify;
@@ -84,7 +93,7 @@
 .timeline-item {
   position: relative;
   padding-left: 1.5rem;
-  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  border-left: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 /* El punto en la línea de tiempo */
@@ -95,8 +104,8 @@
   top: 5px;
   width: 8px;
   height: 8px;
-  background-color: #111a2e;
-  border: 2px solid #6ee7b7;
+  background-color: var(--fondo-borde, #2a0a1c);
+  border: 2px solid var(--acento, #fbbf24);
   border-radius: 50%;
 }
 
@@ -111,13 +120,13 @@
 
 .timeline-header h4 {
   font-size: 1.1rem;
-  color: #6ee7b7;
+  color: var(--acento, #fbbf24);
   font-weight: 600;
 }
 
 .timeline-date {
   font-size: 0.9rem;
-  color: #8b95a1;
+  color: var(--texto-tenue, #e0a9bd);
 }
 
 /* =========================================
@@ -132,14 +141,14 @@
 }
 
 .badge-outline {
-  border: 1px solid #6ee7b7;
-  color: #6ee7b7;
+  border: 1px solid var(--acento, #fbbf24);
+  color: var(--acento, #fbbf24);
   background-color: transparent;
 }
 
 .badge-solid {
-  background-color: #6ee7b7;
-  color: #0b0f19;
+  background-color: var(--acento, #fbbf24);
+  color: var(--texto-sobre-acento, #2a0a1c);
 }
 
 /* =========================================

@@ -1,4 +1,45 @@
 /* =========================================
+   PALETA DE COLORES: vino y ámbar (cálida)
+   Cambia solo estas variables y todo el hero se actualiza.
+========================================= */
+:root {
+  --fondo-centro: #7a1d4e;   /* vino / frambuesa (centro del degradado) */
+  --fondo-borde: #2a0a1c;    /* vino muy oscuro (bordes) */
+  --acento: #fbbf24;         /* ámbar: botón, punto, borde de foto */
+  --acento-suave: rgba(251, 191, 36, 0.55);
+  --texto: #ffffff;
+  --texto-suave: #f6e4d8;    /* crema: descripción */
+  --texto-tenue: #e0a9bd;    /* rosa suave: flecha e indicadores */
+  --texto-sobre-acento: #2a0a1c;
+}
+
+/* ---- Alternativa 1: esmeralda y lima ----
+:root {
+  --fondo-centro: #0f6b4f;
+  --fondo-borde: #03231a;
+  --acento: #a3e635;
+  --acento-suave: rgba(163, 230, 53, 0.55);
+  --texto: #ffffff;
+  --texto-suave: #d6f5e6;
+  --texto-tenue: #8fd1b3;
+  --texto-sobre-acento: #052e1c;
+}
+------------------------------------------ */
+
+/* ---- Alternativa 2: atardecer (naranja y amarillo) ----
+:root {
+  --fondo-centro: #c2410c;
+  --fondo-borde: #3b0d06;
+  --acento: #fde047;
+  --acento-suave: rgba(253, 224, 71, 0.55);
+  --texto: #ffffff;
+  --texto-suave: #ffedd5;
+  --texto-tenue: #fdba74;
+  --texto-sobre-acento: #3b0d06;
+}
+------------------------------------------ */
+
+/* =========================================
    CONTENEDOR PRINCIPAL (Ocupa toda la pantalla)
 ========================================= */
 .hero-section {
@@ -7,8 +48,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at center, #111a2e 0%, #0b0f19 70%);
-  color: #ffffff;
+  background: radial-gradient(circle at center, var(--fondo-centro) 0%, var(--fondo-borde) 75%);
+  color: var(--texto);
   padding: 2rem 5%;
   position: relative;
 }
@@ -28,21 +69,21 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
-  color: #a0aab2;
+  color: var(--texto-suave);
   margin-bottom: 2rem;
 }
 
 .status-dot {
   width: 8px;
   height: 8px;
-  background-color: #00d8ff; /* Cyan */
+  background-color: var(--acento);
   border-radius: 50%;
-  box-shadow: 0 0 8px #00d8ff; /* Efecto de brillo */
+  box-shadow: 0 0 8px var(--acento); /* Efecto de brillo */
 }
 
 /* =========================================
@@ -57,8 +98,8 @@
   height: 160px;
   object-fit: cover; /* Evita que la foto se estire si no es cuadrada */
   border-radius: 50%; /* Hace que sea un círculo perfecto */
-  border: 6px solid rgba(5, 163, 215, 0.8); /* Borde sutil cyan */
-  box-shadow: 0 0 20px rgba(5, 163, 215, 0.8); /* Sombra brillante */
+  border: 6px solid var(--acento-suave); /* Borde del color de acento */
+  box-shadow: 0 0 28px var(--acento-suave); /* Sombra brillante */
 }
 
 /* =========================================
@@ -72,19 +113,19 @@
 }
 
 .text-cyan {
-  color: #00d8ff;
+  color: var(--acento);
 }
 
 .hero-subtitle {
   font-size: 1.1rem;
-  color: #00d8ff;
+  color: var(--texto);
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
 
 .hero-description {
   font-size: 1.1rem;
-  color: #8b95a1;
+  color: var(--texto-suave);
   line-height: 1.6;
   margin-bottom: 2.5rem;
   max-width: 700px;
@@ -109,24 +150,24 @@
 }
 
 .btn-primary {
-  background-color: #00d8ff;
-  color: #0b0f19;
-  border: 2px solid #00d8ff;
+  background-color: var(--acento);
+  color: var(--texto-sobre-acento);
+  border: 2px solid var(--acento);
 }
 
 .btn-primary:hover {
   background-color: transparent;
-  color: #00d8ff;
+  color: var(--acento);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--texto);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* =========================================
@@ -135,7 +176,7 @@
 .scroll-indicator {
   position: absolute;
   bottom: 2rem;
-  color: #8b95a1;
+  color: var(--texto-tenue);
   font-size: 1.5rem;
   animation: bounce 2s infinite;
 }

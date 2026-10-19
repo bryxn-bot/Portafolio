@@ -3,7 +3,7 @@
 ========================================= */
 .habilidades-section {
   padding: 5rem 5%;
-  background-color: #0b0f19;
+  background-color: #2a0a1c; /* vino oscuro, igual que "Sobre mí" */
   display: flex;
   justify-content: center;
 }
@@ -27,11 +27,11 @@
    TARJETA (Card)
 ========================================= */
 .skill-card {
-  background-color: #111a2e;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #46112e; /* vino, igual que las demás tarjetas */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,8 +40,8 @@
 /* Efecto al pasar el mouse */
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  border-color: rgba(110, 231, 183, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border-color: rgba(251, 191, 36, 0.4); /* borde ámbar */
 }
 
 /* =========================================
@@ -63,7 +63,7 @@
 }
 
 .text-cyan {
-  color: #00d8ff;
+  color: #fbbf24; /* ámbar */
 }
 
 /* =========================================
@@ -81,24 +81,24 @@
   transition: background-color 0.3s ease;
 }
 
-/* Variante Verde (Certificado) */
+/* Variante Verde (Certificado): se deja verde para que se entienda el estado */
 .badge-green {
-  color: #6ee7b7;
-  border-color: rgba(110, 231, 183, 0.4);
+  color: #86efac;
+  border-color: rgba(134, 239, 172, 0.45);
 }
 
 .badge-green:hover {
-  background-color: rgba(110, 231, 183, 0.1);
+  background-color: rgba(134, 239, 172, 0.12);
 }
 
 /* Variante Amarilla (En Proceso) */
 .badge-yellow {
   color: #fbbf24;
-  border-color: rgba(251, 191, 36, 0.4);
+  border-color: rgba(251, 191, 36, 0.45);
 }
 
 .badge-yellow:hover {
-  background-color: rgba(251, 191, 36, 0.1);
+  background-color: rgba(251, 191, 36, 0.12);
 }
 
 /* =========================================
@@ -112,7 +112,7 @@
 }
 
 .skill-desc {
-  color: #8b95a1;
+  color: #f6e4d8; /* crema */
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -120,7 +120,7 @@
 }
 
 .skill-level {
-  color: #6ee7b7;
+  color: #fbbf24; /* ámbar */
   font-size: 0.9rem;
   font-weight: 600;
 }

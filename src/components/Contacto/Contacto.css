@@ -1,17 +1,26 @@
 /* =========================================
+   Usa las mismas variables de color de hero.css (:root).
+   Si cambias la paleta allá, esta sección cambia sola.
+   Los valores después de la coma son respaldo por si
+   hero.css no está cargado.
+========================================= */
+
+/* =========================================
    CONTENEDOR PRINCIPAL
 ========================================= */
 .contacto-section {
   padding: 6rem 5%;
-  background-color: #050810; /* Un fondo ligeramente más oscuro para cerrar la página */
-  color: #ffffff;
+  background-color: #1c0712; /* respaldo */
+  /* Un fondo más oscuro que el resto para cerrar la página */
+  background-color: color-mix(in srgb, var(--fondo-borde, #2a0a1c) 55%, black);
+  color: var(--texto, #ffffff);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .contacto-main-title {
-  color: #00d8ff;
+  color: var(--acento, #fbbf24);
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 4rem;
@@ -43,7 +52,7 @@
 }
 
 .info-desc {
-  color: #8b95a1;
+  color: var(--texto-suave, #f6e4d8);
   line-height: 1.6;
   margin-bottom: 2.5rem;
 }
@@ -61,9 +70,9 @@
 }
 
 .info-icon {
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #00d8ff;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--acento, #fbbf24);
   width: 45px;
   height: 45px;
   border-radius: 12px;
@@ -75,25 +84,27 @@
 .item-label {
   display: block;
   font-size: 0.85rem;
-  color: #8b95a1;
+  color: var(--texto-tenue, #e0a9bd);
   margin-bottom: 0.2rem;
 }
 
 .item-text {
   font-size: 1rem;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--texto, #ffffff);
 }
 
 /* =========================================
    COLUMNA DERECHA (Formulario)
 ========================================= */
 .contacto-form-wrapper {
-  background-color: #111a2e;
+  background-color: #3b1127; /* respaldo */
+  /* Mismo tono de tarjeta que la sección "Sobre mí" */
+  background-color: color-mix(in srgb, var(--fondo-centro, #7a1d4e) 35%, var(--fondo-borde, #2a0a1c));
   padding: 2.5rem;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .contacto-form {
@@ -110,16 +121,16 @@
 
 .form-group label {
   font-size: 0.9rem;
-  color: #a0aab2;
+  color: var(--texto-suave, #f6e4d8);
 }
 
 /* Estilos para los campos de entrada */
 .form-group input,
 .form-group textarea {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--texto, #ffffff);
   padding: 0.8rem 1rem;
   border-radius: 8px;
   font-size: 1rem;
@@ -128,16 +139,18 @@
   transition: all 0.3s ease;
 }
 
-/* Efecto FOCUS (Borde Cyan al hacer clic) */
+/* Efecto FOCUS (Borde de acento al hacer clic) */
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #00d8ff;
-  box-shadow: 0 0 0 2px rgba(0, 216, 255, 0.2);
+  border-color: var(--acento, #fbbf24);
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.25); /* respaldo */
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--acento, #fbbf24) 25%, transparent);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #4b5563;
+  color: rgba(246, 228, 216, 0.45); /* respaldo */
+  color: color-mix(in srgb, var(--texto-suave, #f6e4d8) 45%, transparent);
 }
 
 .form-group textarea {
@@ -148,8 +161,8 @@
    BOTÓN ENVIAR
 ========================================= */
 .btn-submit {
-  background-color: #00d8ff;
-  color: #050810;
+  background-color: var(--acento, #fbbf24);
+  color: var(--texto-sobre-acento, #2a0a1c);
   border: none;
   padding: 1rem;
   border-radius: 8px;
@@ -161,7 +174,9 @@
 }
 
 .btn-submit:hover {
-  background-color: #00bce6;
+  background-color: #f59e0b; /* respaldo */
+  /* Un poco más oscuro que el acento */
+  background-color: color-mix(in srgb, var(--acento, #fbbf24) 85%, black);
   transform: translateY(-2px);
 }
 

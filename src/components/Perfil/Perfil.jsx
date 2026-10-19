@@ -24,19 +24,14 @@ const Perfil = () => {
             </div>
 
             <p className="card-text">
-              Ingeniero de Sistemas Computacionales, con experiencia en la
-              docencia de más de 15 años, dictando clases de forma presencial y virtual
-              en diferentes instituciones educativas de prestigio y con experiencia
-              profesional de más de 11 años.
-              <br /><br />
+              Ingeniero de Software con IA, Practicante de Senati de la escuela ETI,
+              realize proyectos innovadores y trabajos importantes en mi carrera.
               Cuento la Certificación Internacional en Microsoft Office
-              Specialist (MOS) Excel Expert y PL - 300 Data Analyst Associate.
-              Instructor CISCO y ORACLE.
+              Specialist (MOS) CISCO y ORACLE.
               <br /><br />
               Consultoría y experiencia en desarrollo de software,
               utilizando tecnologías como React, Laravel, NodeJS, ExpressJS, MySQL,
-              PostGreSQL, etc. y en desarrollo de dashboards interactivos mediante
-              Power BI, DAX, Power Query, modelado de datos en SQL y automatizaciones
+              PostGreSQL, etc. Creando modelado de datos en SQL y automatizaciones
               con Python.
             </p>
           </div>
@@ -60,34 +55,25 @@ const Perfil = () => {
               {/* Ítem de Educación 1 */}
               <div className="timeline-item">
                 <div className="timeline-header">
-                  <h4>Ingeniería de Sistemas Computacionales</h4>
+                  <h4>Ingeniería de Software con IA</h4>
                   <span className="badge badge-outline">Titulado</span>
                 </div>
-                <span className="timeline-date">UNIVERSIDAD TECNOLÓGICA DEL PERÚ</span>
+                <span className="timeline-date"> SENATI </span>
               </div>
 
               {/* Ítem de Educación 2 */}
               <div className="timeline-item">
                 <div className="timeline-header">
-                  <h4>Computación e Informática</h4>
+                  <h4>DATABASE FOUNDAMENTS</h4>
                   <span className="badge badge-outline">Titulado</span>
                 </div>
                 <span className="timeline-date">I.S.T CESCA</span>
               </div>
 
-              {/* Ítem de Educación 3 */}
-              <div className="timeline-item">
-                <div className="timeline-header">
-                  <h4>MOS Excel Expert</h4>
-                  <span className="badge badge-outline">Certificación Internacional</span>
-                </div>
-                <span className="timeline-date">MICROSOFT</span>
-              </div>
-
               {/* Ítem de Educación 4 */}
               <div className="timeline-item">
                 <div className="timeline-header">
-                  <h4>Power BI Data Analyst Associate - PL - 300</h4>
+                  <h4> RACLE </h4>
                   <span className="badge badge-outline">Certificación Internacional</span>
                 </div>
                 <span className="timeline-date">MICROSOFT</span>

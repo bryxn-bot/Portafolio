@@ -7,12 +7,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
-    background-color: #0b0f19; /* Fondo oscuro elegante */
+    background-color: #2a0a1c; /* vino oscuro, igual que el borde del hero */
     color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(251, 191, 36, 0.25); /* línea ámbar sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* =====================================
@@ -26,7 +27,7 @@
 }
 
 .text-cyan {
-    color: #00d8ff;     /* Color de acento (Cyan) */ 
+    color: #fbbf24;     /* Color de acento (ámbar) */
 }
 
 /* =====================================
@@ -38,7 +39,7 @@
 }
 
 .navbar-links a {
-    color: #a0aab2;
+    color: #f6e4d8; /* crema */
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -46,7 +47,7 @@
 }
 
 .navbar-links a:hover {
-    color: #ffffff;
+    color: #fbbf24; /* ámbar al pasar el mouse */
 }
 
 /* =====================================
@@ -56,13 +57,13 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 6x;
+    gap: 6px;
 }
 
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: #fbbf24;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -82,11 +83,12 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #0b0f19;
+        background-color: #2a0a1c;
+        border-bottom: 1px solid rgba(251, 191, 36, 0.25);
         padding: 2rem 0;
         text-align: center;
         gap: 2rem;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
     }
 
     .navbar-links.open{

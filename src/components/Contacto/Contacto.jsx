@@ -54,7 +54,7 @@ const Contacto = () => {
                 </div>
                 <div>
                   <span className="item-label">Email</span>
-                  <p className="item-text">gbarboza.es@gmail.com</p>
+                  <p className="item-text">brayanhuaman64@gmail.com</p>
                 </div>
               </div>
 

@@ -24,13 +24,13 @@ const Banner = () => {
 
         {/* 3. Título Principal */}
         <h1 className="hero-title">
-          Giancarlos <br />
-          <span className="text-cyan">Barboza</span>
+          Brayan <br />
+          <span className="text-cyan">Huaman Rengifo</span>
         </h1>
 
         {/* 4. Subtítulo (Rol) */}
         <h2 className="hero-subtitle">
-          Consultor e Instructor BI - Software | MOS Excel Expert | Power BI Data Analyst | Ingeniero de Sistemas
+          DESARROLLADOR DE SQL SERVER DEVELOPER | DESARROLLADOR WEB
         </h2>
 
         {/* 5. Descripción */}
