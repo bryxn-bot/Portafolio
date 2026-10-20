@@ -1,42 +1,44 @@
 import './Proyectos.css';
-
+  import semaforo from '../../assets/semaforo2.jpg';
+  import pelectric from '../../assets/pelectric.jpg';
+  import android from '../../assets/androidstudio.png';
 const Proyectos = () => {
   // Arreglo de proyectos (Simulando una base de datos o API)
   const proyectosData = [
     {
       id: 1,
-      imagen: "https://foria.com.pe/imagenes/zap2356.jpg",
-      titulo: "Desarrollo de Aplicación Web y Carrito de Compras - FORIA SAC",
-      descripcion: "Aplicación web de venta de calzados para varones, mujeres, niños y niñas.",
-      tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Laravel", "PostGreSQL"],
-      linkDemo: "https://foria.com.pe",
+      imagen: pelectric,
+      titulo: "Desarrollo de pagina web - G-SERVICES SAC",
+      descripcion: "Aplicación web de venta de suministros electricos y servicios indutriales.",
+      tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Laravel", "MySQL"],
+      linkDemo: "",
       linkCodigo: "#"
     },
     {
       id: 2,
-      imagen: "https://fravia.com.pe/imagenes/HOMBRE-cAT.jpg",
-      titulo: "Desarrollo de Aplicación Web y Carrito de Compras - FRAVIA SAC",
-      descripcion: "Aplicación web de venta de ropa para varones, mujeres, niños y niñas.",
-      tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Laravel", "PostGreSQL"],
+      imagen: android ,
+      titulo: "Desarrollo de Aplicación movil de gestion de tareas GesTask.",
+      descripcion: "Aplicación movil, para organizacion de tareas, donde el Admin podra asignar tareas a los empleados.",
+      tecnologias: ["AndroidStudio", "SQLite", "Java"],
       linkDemo: "https://fravia.com.pe",
       linkCodigo: "#"
     },
     {
       id: 3,
-      imagen: "https://intikisa.pe/wp-content/uploads/2024/08/Productos_en_polvo1.png.webp",
-      titulo: "Aplicación Web de venta de productos naturales",
-      descripcion: "Aplicación web para la venta de productos naturales online.",
-      tecnologias: ["React", "Laravel", "PostGreSQL"],
-      linkDemo: "https://intikisa.pe",
+      imagen: "https://jypsac.com/wp-content/uploads/2025/05/133432-2.jpg.webp",
+      titulo: "Pagina web de Perifericos Jyp Perifericos SAC.",
+      descripcion: "Aplicación web para la venta y servicio de perifericos.",
+      tecnologias: ["React", "Laravel", "MySQL", "JavaScript"],
+      linkDemo: "https://jypsac.com/",
       linkCodigo: "#"
     },
     {
       id: 4,
-      imagen: "https://liora.io/app/uploads/sites/7/2020/10/power-bi-logo-1.jpg",
-      titulo: "Dashboard Interactivo en Power BI",
-      descripcion: "Construcción de un Panel BI Interactivo.",
-      tecnologias: ["Power BI", "DAX", "Power Query", "Modelado de datos", "Power BI Service", "SharePoint"],
-      linkDemo: "#",
+      imagen: semaforo,
+      titulo: "Semaforo inteligente",
+      descripcion: "Construcción de dos Semaforos Inteligentes con contador de vechiculos.",
+      tecnologias: ["Tinkercard", "C++"],
+      linkDemo: "https://www.tinkercad.com/things/h3QFcRODoip-grupo-4-semaforo-inteligente/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=Y35v0X5-kJQB6SNai35kIS4yzWIH-LoCdEHt3gwqUNM",
       linkCodigo: "#"
     }
   ];

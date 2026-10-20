@@ -17,16 +17,16 @@ const Habilidades = () => {
 },
     {
       id: 2,
-      titulo: "SQL Server / MySQL / PostGreSQL / Oracle",
-      descripcion: "SQL, T-SQL, Optimización, Procedimientos Almacenados.",
+      titulo: "CISCO PACKET TRACER",
+      descripcion: "Conexion de Redes, Desarrollo, Ciberseguridad.",
       nivel: "Avanzado",
       botonTexto: "VER CERTIFICADO",
       estado: "completado"
     },
     {
       id: 3,
-      titulo: "Python for Data Analyst",
-      descripcion: "Pandas, NumPy, Matplotlib, Automatización, Keras.",
+      titulo: "ORACLE FOUNTDAMENTS DATABASE",
+      descripcion: "MySQL, SQL Server",
       nivel: "Avanzado",
       botonTexto: "VER CERTIFICADO",
       estado: "completado"
