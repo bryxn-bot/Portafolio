@@ -1,16 +1,20 @@
+import { useState } from 'react';
 import './Habilidades.css';
+import unmsm from '../../assets/unmsm.jpg';
 
 const Habilidades = () => {
-  // Arreglo de datos: Simulamos la información que podría venir de una API
+  const [imagenActiva, setImagenActiva] = useState(null);
+
   const skillsData = [
     {
-      id: 1,
-      titulo: "Power BI",
-      descripcion: "DAX, Data Modeling, Power Query, Governance.",
-      nivel: "Avanzado",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado" // Usaremos esto para cambiar los colores
-    },
+  id: 1,
+  titulo: "SQL SERVER",
+  descripcion: "Modelado de base de datos, DER, Consultas multiples.",
+  nivel: "Intermedio",
+  botonTexto: "VER CERTIFICADO",
+  certificado: unmsm,
+  estado: "completado"
+},
     {
       id: 2,
       titulo: "SQL Server / MySQL / PostGreSQL / Oracle",
@@ -27,92 +31,18 @@ const Habilidades = () => {
       botonTexto: "VER CERTIFICADO",
       estado: "completado"
     },
-    {
-      id: 4,
-      titulo: "Excel / VBA",
-      descripcion: "Macros, Power Pivot, Power Query, Pivot Tables, Dashboards complejos.",
-      nivel: "Experto",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    },
-    {
-      id: 5,
-      titulo: "Laravel",
-      descripcion: "Backend Developer",
-      nivel: "Avanzado",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    },
-    {
-      id: 6,
-      titulo: "React",
-      descripcion: "Construcción de Interfaces de Usuario Modernas a partir de Componentes",
-      nivel: "Aprendizaje Activo",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    },
-    {
-      id: 7,
-      titulo: "Angular",
-      descripcion: "Construcción de aplicaciones web de una sola página.",
-      nivel: "Aprendizaje Activo",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    },
-    {
-      id: 8,
-      titulo: "Git",
-      descripcion: "Sistema de Control de Versiones.",
-      nivel: "Aprendizaje Activo",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    },
-    {
-      id: 9,
-      titulo: "GitHub",
-      descripcion: "Repositorio en la nube.",
-      nivel: "Aprendizaje Activo",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    },
-    {
-      id: 10,
-      titulo: "JavaScript",
-      descripcion: "Lenguaje de programación interpretado, dialecto del estándar ECMAScript.",
-      nivel: "Aprendizaje Activo",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    },
-    {
-      id: 11,
-      titulo: "Grid",
-      descripcion: "Contrucción de rejillas responsivas.",
-      nivel: "Aprendizaje Activo",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    },
-    {
-      id: 12,
-      titulo: "Flexbox",
-      descripcion: "Método de diseño de página unidimensional para compaginar elementos en filas o columnas.",
-      nivel: "Aprendizaje Activo",
-      botonTexto: "VER CERTIFICADO",
-      estado: "completado"
-    }
+    // ...agrega "certificado" a los demás igual que arriba
   ];
 
   return (
     <section id="tech-stack" className="habilidades-section">
       <div className="habilidades-container">
-        {/* Iteramos sobre el arreglo de datos usando .map() */}
         <div className="habilidades-grid">
           {skillsData.map((skill) => (
             <div key={skill.id} className="skill-card">
 
-              {/* Cabecera de la tarjeta: Ícono y Botón */}
               <div className="skill-header">
                 <div className="skill-icon">
-                  {/* Aquí pueden colocar la etiqueta <img src={LogoPowerBI} /> */}
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                     <line x1="3" y1="9" x2="21" y2="9"></line>
@@ -120,13 +50,18 @@ const Habilidades = () => {
                   </svg>
                 </div>
 
-                {/* Clases dinámicas: Si el estado es proceso, aplicamos la clase 'btn-proceso' */}
-                <span className={`skill-badge ${skill.estado === 'proceso' ? 'badge-yellow' : 'badge-green'}`}>
-                  {skill.botonTexto}
-                </span>
+                {/* Ahora es un <button> y solo aparece si hay certificado */}
+                {skill.certificado && (
+                  <button
+                    type="button"
+                    className={`skill-badge ${skill.estado === 'proceso' ? 'badge-yellow' : 'badge-green'}`}
+                    onClick={() => setImagenActiva(skill.certificado)}
+                  >
+                    {skill.botonTexto}
+                  </button>
+                )}
               </div>
 
-              {/* Cuerpo de la tarjeta: Textos */}
               <div className="skill-body">
                 <h3 className="skill-title">{skill.titulo}</h3>
                 <p className="skill-desc">{skill.descripcion}</p>
@@ -137,6 +72,23 @@ const Habilidades = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal del certificado */}
+      {imagenActiva && (
+        <div className="modal-overlay" onClick={() => setImagenActiva(null)}>
+          <div className="modal-contenido" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="modal-cerrar"
+              onClick={() => setImagenActiva(null)}
+              aria-label="Cerrar"
+            >
+              ✕
+            </button>
+            <img src={imagenActiva} alt="Certificado" />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

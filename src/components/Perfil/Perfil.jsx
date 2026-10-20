@@ -24,14 +24,13 @@ const Perfil = () => {
             </div>
 
             <p className="card-text">
-              Ingeniero de Software con IA, Practicante de Senati de la escuela ETI,
-              realize proyectos innovadores y trabajos importantes en mi carrera.
-              Cuento la Certificación Internacional en Microsoft Office
-              Specialist (MOS) CISCO y ORACLE.
+              Ingeniero de Software con IA, Practicante de Senati de la escuela ETI, 
+              culmine proyectos innovadores y trabajos importantes en mi carrera.
+              Cuento la Certificación Internacional de ORACLE.
               <br /><br />
               Consultoría y experiencia en desarrollo de software,
-              utilizando tecnologías como React, Laravel, NodeJS, ExpressJS, MySQL,
-              PostGreSQL, etc. Creando modelado de datos en SQL y automatizaciones
+              utilizando tecnologías como React, Laravel, NodeJS,SQL Server, MySQL,
+              Html, etc. Creando modelado de datos en SQL y automatizaciones
               con Python.
             </p>
           </div>
@@ -58,29 +57,19 @@ const Perfil = () => {
                   <h4>Ingeniería de Software con IA</h4>
                   <span className="badge badge-outline">Titulado</span>
                 </div>
-                <span className="timeline-date"> SENATI </span>
+                <span className="timeline-date">SENA.TI </span>
               </div>
 
               {/* Ítem de Educación 2 */}
               <div className="timeline-item">
                 <div className="timeline-header">
                   <h4>DATABASE FOUNDAMENTS</h4>
-                  <span className="badge badge-outline">Titulado</span>
+                  <span className="badge badge-outline">Certificado</span>
                 </div>
-                <span className="timeline-date">I.S.T CESCA</span>
-              </div>
-
-              {/* Ítem de Educación 4 */}
-              <div className="timeline-item">
-                <div className="timeline-header">
-                  <h4> RACLE </h4>
-                  <span className="badge badge-outline">Certificación Internacional</span>
-                </div>
-                <span className="timeline-date">MICROSOFT</span>
+                <span className="timeline-date"> UNMSM </span>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
