@@ -198,3 +198,14 @@
     padding: 1.5rem;
   }
 }
+
+.info-item a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+  color: #0a66c2;
+  text-decoration: underline;
+}
